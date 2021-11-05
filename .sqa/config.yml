@@ -1,0 +1,15 @@
+config:
+  credentials: []
+  project_repos: {}
+environment:
+  IM_AUTH: val1
+sqa_criteria:
+  qc_style:
+    repos:
+      this_repo:
+        commands:
+        - echo $VAL2
+        - echo $IM_AIUTH
+        - im_client.py -h
+        container: imclient
+timeout: 600
