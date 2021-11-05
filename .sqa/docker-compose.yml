@@ -1,7 +1,7 @@
 services:
   imservice:
     entrypoint: /bin/sh
-    command: -c "sleep 6000000"
+    command: -c "echo $IM_AUTH > /tmp/auth.dat && sleep 6000000"
     image: grycap/im-client
     volumes:
     - source: ./
