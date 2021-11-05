@@ -1,15 +1,11 @@
 config:
   credentials: []
   project_repos: {}
-environment:
-  IM_AUTH: |
-    type = InfrastructureManager; username = micafer; password = alguna
 sqa_criteria:
   qc_style:
     repos:
       this_repo:
         commands:
-        - echo $IM_AUTH > /tmp/auth.dat
         - im_client.py list -r https://appsgrycap.i3m.upv.es:31443/im-dev/ -a /tmp/auth.dat
         container: imservice
 timeout: 600

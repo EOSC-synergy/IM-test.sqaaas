@@ -1,11 +1,13 @@
 services:
   imservice:
     entrypoint: /bin/sh
-    command: -c "sleep 6000000"
+    command: -c "echo $IM_AUTH > /tmp/auth.dat && sleep 6000000"
     image: grycap/im-client
     volumes:
     - source: ./
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
+    environment:
+      - IM_AUTH="type = InfrastructureManager; username = micafer; password = alguna"
 version: '3.7'
