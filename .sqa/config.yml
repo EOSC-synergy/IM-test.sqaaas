@@ -8,8 +8,7 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
+        - echo $IM_AUTH
         - echo $VAL2
-        - echo $IM_AIUTH
-        - im_client.py -h
-        container: imclient
+        container: imservice
 timeout: 600
