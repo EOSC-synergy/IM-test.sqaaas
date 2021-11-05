@@ -1,6 +1,7 @@
 services:
   imservice:
-    command: sleep 6000000
+    entrypoint: /bin/sh
+    command: -c "sleep 6000000"
     image: grycap/im-client
     volumes:
     - source: ./
