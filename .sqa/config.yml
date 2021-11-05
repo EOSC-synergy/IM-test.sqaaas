@@ -8,6 +8,6 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - list -r http://appsgrycap.i3m.upv.es:31443/im-dev/
+        - im_client.py list -r http://appsgrycap.i3m.upv.es:31443/im-dev/
         container: imservice
 timeout: 600
