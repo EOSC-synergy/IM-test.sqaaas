@@ -9,6 +9,7 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - im_client.py list -r http://appsgrycap.i3m.upv.es:31443/im-dev/ -a /tmp/auth.dat
+        - echo $IM_AUTH > /tmp/auth.dat
+        - im_client.py list -r https://appsgrycap.i3m.upv.es:31443/im-dev/ -a /tmp/auth.dat
         container: imservice
 timeout: 600
