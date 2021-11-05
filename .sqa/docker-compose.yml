@@ -1,9 +1,7 @@
 services:
-  imclient:
+  imservice:
     command: sleep 6000000
-    environment:
-      VAL2: vale23
-    image: grycap/in-client
+    image: grycap/im-client
     volumes:
     - source: ./
       target: /sqaaas-build
