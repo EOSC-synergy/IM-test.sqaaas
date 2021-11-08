@@ -11,5 +11,6 @@ services:
     environment:
       IM_AUTH: |
         type = InfrastructureManager; username = micafer; password = alguna
+        type = VMRC; host = http://appsgrycap.i3m.upv.es:32080/vmrc/vmrc; username = demo; password = demo
         id = dummy; type = Dummy
 version: '3.7'
