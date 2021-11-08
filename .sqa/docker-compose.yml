@@ -2,7 +2,7 @@ services:
   imservice:
     entrypoint: /bin/sh
     command: -c "echo \"$$IM_AUTH\" > /tmp/auth.dat && sleep 600000"
-    image: grycap/im-client:1.5.10-dev3
+    image: grycap/im-client:1.5.10-dev4
     volumes:
     - source: ./
       target: /sqaaas-build
