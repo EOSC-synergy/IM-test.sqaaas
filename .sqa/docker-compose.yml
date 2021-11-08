@@ -9,5 +9,7 @@ services:
       type: bind
     working_dir: /sqaaas-build
     environment:
-      - IM_AUTH=type = InfrastructureManager; username = micafer; password = alguna
+      IM_AUTH: |
+        type = InfrastructureManager; username = micafer; password = alguna
+        id = dummy; type = Dummy
 version: '3.7'
