@@ -3,11 +3,12 @@ config:
   project_repos: {}
 environment:
   MAX_TIME: 120
+  IM_URL: "https://appsgrycap.i3m.upv.es:31443/im-dev/"
 sqa_criteria:
   qc_style:
     repos:
       this_repo:
         commands:
-        - test_infra.sh tosca-templates/simple-node-docker.yml $MAX_TIME -r https://appsgrycap.i3m.upv.es:31443/im-dev/ -a /tmp/auth.dat
+        - test_infra.sh tosca-templates/simple-node-docker.yml $MAX_TIME -r $IM_URL -a /tmp/auth.dat
         container: imservice
 timeout: 600
